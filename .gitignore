@@ -1,0 +1,9 @@
+.*.sw?
+.sw?
+*~
+*.o
+.DS_Store
+cscope.out
+tags
+
+/bin
