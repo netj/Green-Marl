@@ -6,7 +6,9 @@ INC = ./inc
 OBJ = ../obj
 BIN = ../bin
 CFLAGS += -g -O1 -I$(INC) -I.
+ifneq ($(shell uname),Darwin)
 LDFLAGS += -lrt 
+endif
 
 # where to find sorce codes
 vpath %.h  inc
