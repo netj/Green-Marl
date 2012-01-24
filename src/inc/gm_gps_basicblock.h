@@ -38,7 +38,7 @@ class gm_gps_basic_block {
     bool is_after_vertex() {return after_vertex;}
     void set_type(int t) {type = t;}
     void set_id(int i) {id = i;}
-    bool set_after_vertex(bool b) {after_vertex =  b;}
+    void set_after_vertex(bool b) {after_vertex =  b;}
 
     int get_num_exits() {return exits.size();}
     gm_gps_basic_block* get_nth_exit(int n) {return exits[n];}
@@ -107,7 +107,7 @@ public:
     gps_syminfo* find_symbol_info(gm_symtab_entry *sym) {
         if (symbols.find(sym) == symbols.end())
             return NULL;
-        else symbols.find(sym)->second;
+        else return symbols.find(sym)->second;
     }
     void add_symbol_info(gm_symtab_entry *sym,gps_syminfo* info)
     {
@@ -122,7 +122,7 @@ class gps_apply_bb {
 public:
     virtual void apply(gm_gps_basic_block* b)=0;
     virtual bool has_changed() {return changed;}
-    virtual bool set_changed(bool b) {changed = b;} 
+    virtual void set_changed(bool b) {changed = b;} 
 protected:
     bool changed;
 };

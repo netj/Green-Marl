@@ -177,8 +177,8 @@ class ast_node {
     public:
         int get_line() {return line;}
         int get_col() {return col;}
-        int set_line(int l) {line = l;}
-        int set_col(int c) {col = c;}
+        void set_line(int l) {line = l;}
+        void set_col(int c) {col = c;}
 
 
     //--------------------------------------
@@ -903,7 +903,7 @@ class ast_expr : public ast_node
         bool is_reduction() {return expr_class == GMEXPR_REDUCE;}
         bool is_builtin()  {return expr_class == GMEXPR_BUILTIN;}
         bool is_terop()  {return expr_class == GMEXPR_TER;}
-        bool is_foreign() {return expr_class = GMEXPR_FOREIGN;}
+        bool is_foreign() {return expr_class == GMEXPR_FOREIGN;}
 
         //-----------------------------------------------
         // type is set after type-checker execution
