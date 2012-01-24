@@ -319,6 +319,7 @@ ast_node* GM_normal_assign(ast_node* lhs, ast_node* rhs)
         return ast_assign::new_assign_field(
                 (ast_field*)lhs, (ast_expr*)rhs, GMASSIGN_NORMAL, NULL, GMREDUCE_NULL);
     }
+    return false;
 }
 ast_node* GM_reduce_assign(ast_node* lhs, ast_node* rhs, ast_node* id, int reduce_type)
 {
@@ -359,6 +360,7 @@ ast_node* GM_defer_assign(ast_node* lhs, ast_node* rhs, ast_node* id)
         return ast_assign::new_assign_field(
                 (ast_field*)lhs, (ast_expr*)rhs, GMASSIGN_DEFER, (ast_id*)id, GMREDUCE_DEFER);
     }
+    return false;
 }
 
 ast_node* GM_foreach(ast_node* id, ast_node* source, int iter_typ, ast_node* sent, ast_node* filter, bool is_seq, bool is_backward)

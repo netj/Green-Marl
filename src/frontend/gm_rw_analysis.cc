@@ -1205,6 +1205,8 @@ class gm_print_rw_info : public gm_apply
                  (s->get_parent()->get_nodetype() != AST_PROCDEF))) {
                 _tab --;
             }
+
+            return true;
         }
         virtual void begin_context(ast_node* n) {_tab++;} //printf("XXXX:%d\n",_tab);}
         virtual void end_context(ast_node* n) {_tab--;} //printf("YYYY\n");}

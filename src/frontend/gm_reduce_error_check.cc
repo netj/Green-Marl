@@ -39,6 +39,7 @@ static bool add_bound(list_t& L, gm_symtab_entry* t, gm_symtab_entry* b, int r_t
     T->bound = b;
     T->reduce_type  = r_type;
     L.push_back(T);
+    return true;
 }
 static void remove_bound(list_t& L, gm_symtab_entry* t, gm_symtab_entry* b, int r_type)
 {
@@ -104,6 +105,7 @@ static bool remove_all(list_t& L, gm_rwinfo_map B)
             remove_bound(L, e, jj->bound_symbol, jj->reduce_op);
         }
     }
+    return true;
 }
 
 

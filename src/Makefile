@@ -5,7 +5,7 @@ PARSE = ./parse
 INC = ./inc
 OBJ = ../obj
 BIN = ../bin
-CFLAGS += -g -O1 -I$(INC) -I. -Wall -Wno-unused -Wno-sign-compare -Wno-reorder -Wno-return-type -Werror
+CFLAGS += -g -O1 -I$(INC) -I. -Wall -Wno-unused -Wno-sign-compare -Wno-reorder -Werror
 ifneq ($(shell uname),Darwin)
 LDFLAGS += -lrt 
 endif

@@ -228,7 +228,7 @@ class gm_scope
         bool is_for_node_prop() {return node_prop;}
         gm_symtab_entry* get_target_sym() {return G;}
         bool set_group_expr(bool for_group, gm_symtab_entry *g= NULL, bool np=false) {
-            for_group_expr = for_group;G = g; node_prop = np;}
+            for_group_expr = for_group;G = g; node_prop = np; return true;}
 
         void set_return_type(ast_typedecl* R) {RT = R;}
         ast_typedecl* get_return_type() {return RT;}

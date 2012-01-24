@@ -38,6 +38,7 @@ public:
         }
 
 
+        return true;
     }
                          
     bool apply(ast_sent* s)

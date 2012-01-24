@@ -109,6 +109,7 @@ static inline bool is_applicable_rule(gm_type_rule& R, int op, int type1, int ty
         else 
             return in_typeclass(R.type1, type1) && in_typeclass(R.type2, type2);
     }
+    return false;
 }
 
 bool gm_is_t2_equal_or_large_numeric_type(int t1, int t2)

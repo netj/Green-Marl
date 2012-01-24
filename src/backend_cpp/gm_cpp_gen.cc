@@ -49,6 +49,7 @@ bool gm_cpp_gen::open_output_files()
 
     get_lib()->set_code_writer(&Body);
 
+    return true;
 }
 void gm_cpp_gen::close_output_files()
 {

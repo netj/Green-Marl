@@ -72,6 +72,7 @@ class gps_merge_symbol_usage_t : public gps_apply_bb_ast
                 out_iterator = fe->get_iterator()->getSymInfo();
             }
         }
+        return true;
     }
 
     virtual bool apply2(ast_sent * s) {
@@ -79,6 +80,7 @@ class gps_merge_symbol_usage_t : public gps_apply_bb_ast
         {
             foreach_depth--;
         }
+        return true;
     }
 
     virtual bool apply(ast_expr* e) 
@@ -119,6 +121,7 @@ class gps_merge_symbol_usage_t : public gps_apply_bb_ast
                 }
             }
         }
+        return true;
     }
     protected:
         void update_access_information(ast_id *i, bool is_scalar, int usage, int r_type = GMREDUCE_NULL)
